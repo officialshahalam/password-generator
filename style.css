@@ -264,7 +264,7 @@ button {
   position: absolute;
   top: -2rem;
   right: -1rem;
-  color: var(--color5);
+  color: var(--color1);
   transform: scale(0);
   transition: all 250ms linear;
 }
