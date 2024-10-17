@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+.mood{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+:root {
+  --color1:#e0e1dd;
+  --color2:#778da9;
+  --color3:#415a77;
+  --color4:#1b263b;
+  --color5:#0d1b2a;
+  --color6: #fff;
+}
+.darkMode{
+  --color1:#0d1b2a;
+  --color2:#1b263b;
+  --color3:#415a77;
+  --color4:#778da9;
+  --color5:#e0e1dd;
+  --color6: #000;
+}
+
+#wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(-231deg,var(--color6),var(--color6));
+  display: grid;
+  place-items: center;
+  overflow: hidden auto;
+}
+
+/* Design Main Container */
+.container {
+  width: 90%;
+  max-width: 450px;
+}
+
+.heading {
+  line-height: 1.2;
+  color: var(--color5);
+  opacity: 0.75;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Display Container */
+.displayContainer {
+  position: relative;
+  background-color: var(--color1);
+  border-radius: 1rem;
+  border-bottom: 0.35rem solid var(--color3);
+  padding-top: 0.35rem;
+  margin: 1rem 0;
+}
+
+.displayContainer input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 1.15rem 1rem;
+  color: var(--color5);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 30px;
+  letter-spacing: 1px;
+  padding-right: 3.25rem;
+}
+
+.displayContainer input::placeholder {
+  color: var(--color5);
+  text-transform: uppercase;
+  opacity: 0.65;
+  font-size: 1.5rem;
+  line-height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.copyBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.5rem;
+}
+
+/* Display Container End */
+
+/* Input Container Start  */
+.inputContainer {
+  background-color: var(--color1);
+  border-radius: 1rem;
+  border-bottom: 0.35rem solid var(--color3);
+  padding: 2rem;
+  width: 100%;
+  /* color: var(--pl-white); */
+}
+
+/* Length Container Start  */
+.lengthContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lengthContainer p:nth-child(1) {
+  color: var(--color5);
+  font-size: 1.5rem;
+}
+
+.lengthContainer p:nth-child(2) {
+  color: var(--color5);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Length Container End  */
+
+/* Slider Start  */
+.slider {
+  appearance: none;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  height: 0.75rem;
+  background: var(--color3);
+  background-image: linear-gradient(var(--color5), var(--color5));
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.slider:focus {
+  outline: 2px solid var(--color4);
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--color5);
+  box-shadow: 0px 0px 20px 0px var(--color5);
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  margin-top: -3px;
+  z-index: 2;
+  position: relative;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  outline: 2px solid var(--color5);
+  background-color: var(--color1);
+  box-shadow: 0px 0px 25px 5px var(--color5);
+}
+
+/* Checkboxes Start */
+.check {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+} 
+
+.check label {
+  text-transform: capitalize;
+  color: var(--color5);
+  font-size: 1.25rem;
+  letter-spacing: 0.75px;
+}
+
+.check input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color4);
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.35rem;
+}
+
+.check input:checked {
+  background-color: var(--color4);
+}
+
+.check input:checked::before {
+  position: absolute;
+  content: "✔";
+  color: var(--color1);
+  font-size: 1.05rem;
+  font-weight: 600;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1px;
+}
+
+/* Checkboxes End */
+
+/* Strength Container Start  */
+
+.strengthContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.strengthContainer p {
+  color: var(--color5);
+  font-size: 1.5rem;
+}
+
+.indicator {
+  width: 1.5em;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+/* Strength Container End  */
+
+/* Generate Button  */
+#generateBtn {
+  background: var(--color2);
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 0.75rem;
+  border-bottom: 0.35rem solid var(--color3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color5);
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/* Generate Button Ends 
+ */
+.tooltip{
+  background-color: var(--color4);
+  border-radius: 5px;
+  padding: 4px 5px;
+  position: absolute;
+  top: -2rem;
+  right: -1rem;
+  color: var(--color5);
+  transform: scale(0);
+  transition: all 250ms linear;
+}
+ .active{
+  transform: scale(1);
+ }
